@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hiltsupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hiltsupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hiltsupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hiltsupipelinesjavascriptdocker 
+          image: acrhhelenius002.azurecr.io/hiltsupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
